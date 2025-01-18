@@ -1,140 +1,171 @@
-# READMINE: Suggested template for software READMEs
+## Previsão de Tendências no Mercado de Trabalho em Tecnologia
+|Language: | [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)|
+|-:|:-|
+|Libraries: | [![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/docs/) [![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)](https://matplotlib.org/stable/index.html)|
+|IDE: | [![Google Colab](https://img.shields.io/badge/Google%20Colab-%23F9A825.svg?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/) [![VSC](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)|
+|License: | [![ODbL1.0](https://img.shields.io/badge/Open%20Database%20License%20(ODbL)%201.0-63aa63?style=for-the-badge)](./LICENSE)|
 
-This is an example README file demonstrating a suggested structure for README files of software projects on GitHub.  You can copy this [`README.md`](https://raw.githubusercontent.com/mhucka/readmine/main/README.md) file into your project repository and edit the text as needed.
-
-[![License](https://img.shields.io/badge/License-CC0-lightgray.svg?style=flat-square)](https://creativecommons.org/publicdomain/zero/1.0/)
-[![Latest release](https://img.shields.io/github/v/release/mhucka/readmine.svg?style=flat-square&color=b44e88&label=Latest%20release)](https://github.com/mhucka/readmine/releases)
-[![DOI](http://img.shields.io/badge/DOI-10.5281%2fzenodo.10633361-blue.svg?style=flat-square)](https://zenodo.org/records/10633361)
-[![Mentioned in Awesome Awesome README](https://awesome.re/mentioned-badge-flat.svg)](https://github.com/matiassingers/awesome-readme)
-
-
-## Table of contents
-
-* [Introduction](#introduction)
-* [Installation](#installation)
-* [Quick start](#quick-start)
-* [Usage](#usage)
-* [Known issues and limitations](#known-issues-and-limitations)
-* [Getting help](#getting-help)
-* [Contributing](#contributing)
-* [License](#license)
-* [Acknowledgments](#acknowledgments)
+## Índice
+- [Sobre](#-sobre)
+- [Objetivos](#-objetivos)
+- [Etapas](#-etapas)
+  - [Extração](#extração)
+  - [Transformação](#transformação)
+- [Configurações](#-configurações)
+  - [Instalação](#Instalação)
+    - [Local](#para-uso-local)
+    - [Colab](#para-uso-em-ambiente-interativo-e-colaborativo)
+- [Problemas conhecidos e limitações](#-problemas-conhecidos-e-limitações)
+- [Licença](#-licença)
 
 
-## Introduction
+## 🚀 Sobre
 
 A common convention in software development is to place a file named _README_ at the top level of a project's source code repository. The file is used to provide basic documentation about the project. The file you are reading now is intended as a self-documenting template for README files, as well an illustration of what the file can be expected to look like. Its structure is based on many other people's examples and recommendations for README files, as well as the author's own experiences of creating open-source projects and repositories over three decades. It is written in [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) format, but could easily be converted to other formats.
 
 For a real software project, the [Introduction](#introduction) section – which you are presently reading – should summarize the motivations for creating the software, the need(s) addressed by the software, what the software does, and optionally, links to resources that can help orient readers. Ideally, this section should be short and use plain language. Keep in mind that not all readers will be familiar with the topic area.
 
+[(Voltar ao topo)](#índice)
+## 📝 Objetivos
 
-## Installation
+Analisar os dados de tendências no mercado de trabalho na área de tecnologia, de 2018 a 2023, para prever as principais habilidades, ferramentas e linguagens de programação que serão mais demandadas em 2024. 
+Avaliar a precisão das predições a partir da coleta de dados de 2024.
 
-Begin this [Installation](#installation) section by describing prerequisites needed to use the software. Examples include required hardware, operating systems, software frameworks, compilers, and/or interpreters.
+[(Voltar ao topo)](#índice)
+## 🪜 Etapas
+Para ficar mais intuitivo, as etapas serão mostradas de maneira que podem ser replicadas no Google Colab.
+"Mostrar etapas do ETL"
 
-Next, provide step-by-step instructions for installing your software, preferably with examples of commands that can be copy-pasted by readers into their computing environments. If your software can be installed using common installers or package managers (e.g., `pip`, `npm`, `brew`, `apt`, etc.), illustrate how it can be done using [code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks) in the Markdown file so that it's clear to readers. For example,
+### Extração
+Representa o acesso inicial aos dados brutos e a preparação para torná-los disponíveis.\
+Todos os arquivos de referência foram coletados da [Pesquisa anual de desenvolvedores do Stack Overflow](https://survey.stackoverflow.co/) e estão sobre a [licença](#-licença) ODbL 1.0.
 
-```sh
-pip install yoursoftware
+  1. #### Arquivos baixados:
+      `stack-overflow-developer-survey-2018.zip`\
+      `stack-overflow-developer-survey-2019.zip`\
+      `stack-overflow-developer-survey-2020.zip`\
+      `stack-overflow-developer-survey-2021.zip`\
+      `stack-overflow-developer-survey-2022.zip`\
+      `stack-overflow-developer-survey-2023.zip`\
+      `stack-overflow-developer-survey-2024.zip`
+      ##### Diretório referência: `/SO_DeveloperSurvey_2018-2024/`
+
+  2. #### Arquivos:
+      Extrair os arquivos `.zip` e renomear o aquivo `survey_results_public.csv` de cada zip.\
+      Todos os arquivos foram renomeados com o seguinte padrão: `survey_results_public_[year].csv`, onde `[year]` corresponde ao ano equivalente.
+
+  3. #### Resultado da preparação:
+      `survey_results_public_2018.csv`\
+      `survey_results_public_2019.csv`\
+      `survey_results_public_2020.csv`\
+      `survey_results_public_2021.csv`\
+      `survey_results_public_2022.csv`\
+      `survey_results_public_2023.csv`\
+      `survey_results_public_2024.csv`
+
+### Transformação
+A transformação envolve limpar, organizar, reformatar e processar os dados para que fiquem em um formato adequado para análise.
+  1. #### Importando as bibliotecas:
+     ```python
+     import pandas as pd
+     import os
+     import matplotlib.pyplot as plt
+     ```
+  2. #### Criando um dicionário para armazenar os DataFrames:
+     ```python
+     survey_data = {}
+     # Caminho para o diretório onde os arquivos estão localizados:
+     data_folder = '/content/drive/MyDrive/Colab_Notebooks/SO_DeveloperSurvey_2018-2024'
+     ```
+  3. #### Criando os DataFrames:
+     Comando "os.listdir" para ler todos os arquivos no diretório da variável "data_folder".\
+     Extrair o ano do arquivo a partir do comando "split", usando "_" e "." como referências.\
+     Usar o nome extraído como chave para o dataset criado e armazenado no dicionário.
+     ```python
+     for file in os.listdir(data_folder):
+       if file.startswith('survey_results_public_') and file.endswith('.csv'):
+         year = file.split('_')[-1].split('.')[0]
+         survey_data[year] = pd.read_csv(os.path.join(data_folder, file))
+     ```
+     Exibindo as chaves do dicionário criado:
+       ```python
+       print(survey_data.keys())
+       # output: dict_keys(['2018', '2019', '2020', '2021', '2022', '2023', '2024'])
+       ```
+  5. #### Identificando o total de respostas por ano:
+     ```python
+     respostas_por_ano = {} # dicionário criado para armazenar o total de respostas por ano
+     for year, df in survey_data.items():
+       respostas_por_ano[year] = len(df)
+     print(respostas_por_ano) # output: {'2018': 98855, '2019': 88883, '2020': 64461, '2021': 83439, '2022': 73268, '2023': 89184, '2024': 65437}
+     ```
+     Total de respostas por ano armazenados no dicionário `respostas_por_ano`.
+  6. #### Listando as colunas em cada DataFrame:
+     ```python
+     for year, df in survey_data.items():
+       print(f"Colunas presentes em survey_data[{year}]: {', '.join(df.columns)}")
+     ```
+       Nos `survey_schemas` há a descrição de cada coluna presente nos `survey_data`.\
+       Através dessas descrições, identifiquei as colunas relevantes em cada DataFrame:
+       > Lista de colunas relevantes em 2018: ` 'LanguageWorkedWith', 'LanguageDesireNextYear'`\
+       > Lista de colunas relevantes em 2019: ` 'LanguageWorkedWith', 'LanguageDesireNextYear'`\
+       > Lista de colunas relevantes em 2020: ` 'LanguageWorkedWith', 'LanguageDesireNextYear'`\
+       > Lista de colunas relevantes em 2021: ` 'LanguageHaveWorkedWith', 'LanguageWantToWorkWith' `\
+       > Lista de colunas relevantes em 2022: ` 'LanguageHaveWorkedWith', 'LanguageWantToWorkWith' `\
+       > Lista de colunas relevantes em 2023: ` 'LanguageHaveWorkedWith', 'LanguageWantToWorkWith' `\
+       > Lista de colunas relevantes em 2024: ` 'LanguageHaveWorkedWith', 'LanguageWantToWorkWith' `
+
+  6. #### Limpando os Dataframes:
+     Removendo todas as colunas que não foram identificadas como relevantes.
+     Padronizando o nome de todas as colunas. 'LanguageWorkedWith' e 'LanguageHaveWorkedWith' para 'Language', assim como, 'LanguageDesireNextYear' e 'LanguageWantToWorkWith' para 'LanguageWanted'
+     ```python
+     for year, df in survey_data.items():
+       df.drop(columns=[col for col in df.columns if col not in ['LanguageWorkedWith', 'LanguageDesireNextYear', 'LanguageHaveWorkedWith', 'LanguageWantToWorkWith']], inplace=True)
+       df = df.rename(columns={'LanguageWorkedWith': 'Language','LanguageDesireNextYear': 'LanguageWanted','LanguageHaveWorkedWith': 'Language','LanguageWantToWorkWith': 'LanguageWanted'}) 
+     ```
+  
+  7. ####
+  8. ####
+  9. ####
+  10. ####
+  11. ####
+
+[(Voltar ao topo)](#índice)
+## 💡 Problemas conhecidos e limitações
+
+Falar sobre as diversas colunas disponíveis e não-utilizadas nos dados da pesquisa.
+
+[(Voltar ao topo)](#índice)
+## ⚙️ Configurações
+Linguagem de programação: Python.
+Usei as bibliotecas: `pandas` e `Matplotlib` para coleta, processamento e formatação dos dados e a para gráficos e análise, respectivamente.
+Ambiente de Desenvolvimento: Visual Studio Code e Google Colab.
+
+Instalação na próxima seção [Instalação](#instalação).
+
+[(Voltar ao topo)](#índice)
+### Instalação
+#### Para uso local:
+1. O **Python** pode ser baixado direto de seu [site oficial](https://www.python.org/).
+2. Para **IDE** recomendo o uso do **Visual Studio Code**, baixado direto de seu [site oficial](https://code.visualstudio.com/).
+3. Instalando as bibliotecas:
+```python
+pip install pandas
+pip install matplotlib
+```
+#### Para uso em ambiente interativo e colaborativo:
+1. O **Google Colab** pode ser utilizado através de seu [site oficial](https://colab.research.google.com/).
+2. Instalando as bibliotecas:
+```colab
+!pip install pandas
+!pip install matplotlib
 ```
 
-For installation methods that don't involve command lines, providing screenshots along with written instructions can help readers figure out what they need to do.
+[(Voltar ao topo)](#índice)
+## 📃 Licença
 
-Subsections may be appropriate within this [Installation](#installation) section for different operating systems or particularly complicated installations. Keep in mind, though, that the more complicated the installation process is, the more likely that users will encounter difficulties and give up.
+This database - The Public 2018 Stack Overflow Developer Survey Results - is made available under the Open Database License (ODbL): http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: [http://opendatacommons.org/licenses/dbcl/1.0/](http://opendatacommons.org/licenses/dbcl/1.0/)
 
+TLDR: You are free to share, adapt, and create derivative works from The Public 2018 Stack Overflow Developer Survey Results as long as you attribute Stack Overflow, keep the database open (if you redistribute it), and continue to share-alike any adapted database under the ODbl.
 
-## Quick start
-
-Nobody wants to read long explanations about how to use your software before they can try it, especially while they are still deciding _whether_ to try it. A [Quick start](#quick-start) section right after the installation instructions can help readers figure out what's involved.
-
-Explain the minimal configuration (if any) required to use the software, then provide the simplest example or command that demonstrates actual functionality implemented by your software. If your software is command-line oriented, provide examples (again in [code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks) in the Markdown file).
-
-```sh
-yoursoftware argument1 argument2
-```
-
-If your software is not command-line oriented, providing static screenshots annotated with arrows or other guidance is a good approach to showing readers how to use the software. The temptation to use embedded videos or animated GIFs here may be strong, but it is better to resist it, or at least to use them only as a way to _augment_ and not replace written explanations. It takes people longer to watch a video than to skim textual descriptions on a page, which can annoy potential users; moreover, some users turn off video players in their browsers and may not even see the embedded video content.
-
-
-## Usage
-
-The [Usage](#usage) section would explain in more detail how to run the software, what kind of output or behavior to expect, and so on. It would cover basic operations as well as more advanced uses.
-
-Some of the information in this section will repeat what is in the [Quick start](#quick-start) section. This repetition is unavoidable, but also, not entirely undesirable: the more detailed explanations in this [Usage](#usage) section can help provide more context as well as clarify possible ambiguities that may exist in the more concise [Quick start](#quick-start) section.
-
-If your software is complex and has many features, it may be better to create a dedicated website for your documentation (e.g., in [GitHub Pages](https://pages.github.com), [Read the Docs](https://about.readthedocs.com), or similar) rather than to cram everything into a single linear README file. In that case, the [Usage](#usage) section can be shortened to just a sentence or two pointing people to your documentation site.
-
-
-### Basic operation
-
-When learning how to use anything but the simplest software, new users may appreciate beginning with basic features and modes of operation. If your software has a help system of some kind (e.g., in the form of a command-line flag such as `--help`, or a menu item in a GUI), explaining it is an excellent starting point for this section.
-
-The basic approach for using this README file is as follows:
-
-1. Copy the [README source file](https://raw.githubusercontent.com/mhucka/readmine/main/README.md) to your repository
-2. Delete the body text but keep the section headings
-3. Replace the title heading (the first line of the file) with the name of your software
-4. Save the resulting skeleton file in your version control system
-5. Continue by writing your real README content in the file
-
-The first paragraph in the README file (under the title at the top) should summarize your software in a concise fashion, preferably using no more than one or two sentences as illustrated by the circled text in the figure below.
-
-<p align="center">
-<img alt="Screenshot showing the top portion of this file on the web." width="80%" src="https://raw.githubusercontent.com/mhucka/readmine/main/.graphics/screenshot-top-paragraph.png"><br>
-<em>Figure: Screenshot showing elements of the top portion of this file.</em>
-</p>
-
-The space under the first paragraph and _before_ the [Table of Contents](#table-of-contents) is a good location for optional [badges](https://github.com/badges/shields), which are small visual tokens commonly used on GitHub repositories to communicate project status, dependencies, versions, DOIs, and other information. (Two example badges are shown in the figure above, under the circled text.) The particular badges and colors you use depend on your project and personal tastes.
-
-
-### More options
-
-Some projects need to communicate additional information to users and can benefit from additional sections in the README file. It's difficult to give specific instructions here – a lot depends on your software, your intended audience, etc. Use your judgment and ask for feedback from users or colleagues to help figure out what else is worth explaining.
-
-
-## Known issues and limitations
-
-In this section, summarize any notable issues and/or limitations of your software. If none are known yet, this section can be omitted (and don't forget to remove the corresponding entry in the [Table of Contents](#table-of-contents) too); alternatively, you can leave this section in place and write something along the lines of "none are known at this time".
-
-
-## Getting help
-
-Inform readers how they can contact you, or at least how they can report problems they may encounter. This could take the form of a request to use the issue tracker on your repository. Some projects have associated discussion forums or mailing lists, and this section is a good place to mention those.
-
-
-## Contributing
-
-If your project accepts open-source contributions, this is where you can welcome contributions and explain to readers how they can go about it. Mention the [`CONTRIBUTING.md`](CONTRIBUTING.md) file in your repository, if you have one.
-
-
-## License
-
-This section should state any copyright asserted on the project materials as well as the terms of use for the software, files and other materials found in the project repository.
-
-_This_ README file is itself distributed under the terms of the [Creative Commons 1.0 Universal license (CC0)](https://creativecommons.org/publicdomain/zero/1.0/). The license applies to this file and other files in the [GitHub repository](http://github.com/mhucka/readmine) hosting this file. This does _not_ mean that you, as a user of this README file in your software project, must also use CC0 license!  You may use whatever license for your work you prefer, or whatever you are required to use by your employer or sponsor.
-
-
-## Acknowledgments
-
-This final section is where you should acknowledge funding and/or institutional support, prior work that influenced or inspired your project, resources that you used (such as other people's software), important contributions from other people, and anything else that deserves mention. After all, nothing is truly done in isolation; everything is built on top of something, and we all owe debts to other projects and people who helped us, supported us, and influenced us.
-
-For example, in the process of developing this file, I used not only my own ideas: I read many (sometimes contradictory) recommendations for README files, examined real READMEs in actual use, and tried to distill the best ideas into the result you see here. Sources included the following:
-
-* [Readme Driven Development](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html)
-* [How to Write a Good README](https://dev.to/merlos/how-to-write-a-good-readme-bog)
-* [How To Write A Great README](https://thoughtbot.com/blog/how-to-write-a-great-readme)
-* [How to Write an Awesome Readme](https://dev.to/documatic/how-to-write-an-awesome-readme-cfl)
-* [Readme Best Practices](https://github.com/jehna/readme-best-practices)
-* [Art of README](https://github.com/noffle/art-of-readme)
-* [Making a useful README file for research projects](http://jonathanpeelle.net/making-a-readme-file)
-* [Tips for Making your GitHub Profile Page Accessible](https://github.com/orgs/community/discussions/64778)
-* [Make a README](https://www.makeareadme.com)
-* [ReadMe.so](https://readme.so)
-* [common readme](https://github.com/noffle/common-readme)
-* [Standard Readme](https://github.com/RichardLitt/standard-readme)
-* [CFPB Open Source Project Template Instructions](https://github.com/cfpb/open-source-project-template)
-* [README-Template.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [open-source-template](https://github.com/davidbgk/open-source-template/)
-* [Feedmereadmes: A README Help Exchange](https://github.com/lappleapple/feedmereadmes)
-* [Awesome README List](https://github.com/matiassingers/awesome-readme)
-* [Top ten reasons why I won't use your open source project](https://changelog.com/posts/top-ten-reasons-why-i-wont-use-your-open-source-project)
+[Open Database License (ODbL) 1.0](https://github.com/ghiordanobruno/Pred_SODeveloperSurvey/blob/main/LICENSE)
