@@ -156,16 +156,16 @@ Instalação na próxima seção [Instalação](#instalação).
 #### Para uso em ambiente interativo e colaborativo:
   1. O **Google Colab** pode ser utilizado através de seu [site oficial](https://colab.research.google.com/).
   2. Instalando as bibliotecas:
-     ```python
-     !pip install pandas
-     !pip install matplotlib
-     ```
+      ```python
+      !pip install pandas
+      !pip install matplotlib
+      ```
 
 [(Voltar ao topo)](#índice)
 ## 📃 Licença
 
-This database - The Public 2018 Stack Overflow Developer Survey Results - is made available under the Open Database License (ODbL): http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: [http://opendatacommons.org/licenses/dbcl/1.0/](http://opendatacommons.org/licenses/dbcl/1.0/)
-
-TLDR: You are free to share, adapt, and create derivative works from The Public 2018 Stack Overflow Developer Survey Results as long as you attribute Stack Overflow, keep the database open (if you redistribute it), and continue to share-alike any adapted database under the ODbl.
-
+This database - The Public 2018 Stack Overflow Developer Survey Results - is made available under the Open Database License (ODbL): http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: [http://opendatacommons.org/licenses/dbcl/1.0/](http://opendatacommons.org/licenses/dbcl/1.0/)\
+\
+TLDR: You are free to share, adapt, and create derivative works from The Public 2018 Stack Overflow Developer Survey Results as long as you attribute Stack Overflow, keep the database open (if you redistribute it), and continue to share-alike any adapted database under the ODbl.\
+\
 [Open Database License (ODbL) 1.0](https://github.com/ghiordanobruno/Pred_SODeveloperSurvey/blob/main/LICENSE)
