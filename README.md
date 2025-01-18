@@ -146,20 +146,20 @@ Instalação na próxima seção [Instalação](#instalação).
 [(Voltar ao topo)](#índice)
 ### Instalação
 #### Para uso local:
-1. O **Python** pode ser baixado direto de seu [site oficial](https://www.python.org/).
-2. Para **IDE** recomendo o uso do **Visual Studio Code**, baixado direto de seu [site oficial](https://code.visualstudio.com/).
-3. Instalando as bibliotecas:
-```python
-pip install pandas
-pip install matplotlib
-```
+  1. O **Python** pode ser baixado direto de seu [site oficial](https://www.python.org/).
+  2. Para **IDE** recomendo o uso do **Visual Studio Code**, baixado direto de seu [site oficial](https://code.visualstudio.com/).
+  3. Instalando as bibliotecas:
+     ```python
+     pip install pandas
+     pip install matplotlib
+     ```
 #### Para uso em ambiente interativo e colaborativo:
-1. O **Google Colab** pode ser utilizado através de seu [site oficial](https://colab.research.google.com/).
-2. Instalando as bibliotecas:
-```colab
-!pip install pandas
-!pip install matplotlib
-```
+  1. O **Google Colab** pode ser utilizado através de seu [site oficial](https://colab.research.google.com/).
+  2. Instalando as bibliotecas:
+     ```python
+     !pip install pandas
+     !pip install matplotlib
+     ```
 
 [(Voltar ao topo)](#índice)
 ## 📃 Licença
