@@ -5,12 +5,6 @@
 |IDE: | [![Google Colab](https://img.shields.io/badge/Google%20Colab-%23F9A825.svg?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/) [![VSC](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)|
 |License: | [![ODbL1.0](https://img.shields.io/badge/Open%20Database%20License%20(ODbL)%201.0-63aa63?style=for-the-badge)](./LICENSE)|
 
-\
-[![grp](grafico_respostas_porano.png)](grafico_respostas_porano.png)\
-[![lu](linguagens_usadas.gif)](linguagens_usadas.gif)
-[![[ld](linguagens_desejadas.gif)](linguagens_desejadas.gif)\
-[![rnl](respostas_nulas_linguagens.gif)](respostas_nulas_linguagens.gif)
-[![grne](grafico_respostas_nulas_empilhadas.png)](grafico_respostas_nulas_empilhadas.gif)
 
 ## Índice
 - [Sobre](#-sobre)
@@ -18,7 +12,8 @@
 - [Etapas](#-etapas)
   - [Extração](#extração)
   - [Transformação](#transformação)
-- [Configurações](#-configurações)
+- [Gráficos](#-gráficos)
+- [Configurações](#configurações)
   - [Instalação](#Instalação)
     - [Local](#para-uso-local)
     - [Colab](#para-uso-em-ambiente-interativo-e-colaborativo)
@@ -142,9 +137,13 @@ A transformação envolve limpar, organizar, reformatar e processar os dados par
   11. ####
 
 [(Voltar ao topo)](#índice)
-## 💡 Problemas conhecidos e limitações
+## 📈 Gráficos
 
-Falar sobre as diversas colunas disponíveis e não-utilizadas nos dados da pesquisa.
+[![grp](grafico_respostas_porano.png)](grafico_respostas_porano.png)\
+[![lu](linguagens_usadas.gif)](linguagens_usadas.gif)
+[![[ld](linguagens_desejadas.gif)](linguagens_desejadas.gif)\
+[![rnl](respostas_nulas_linguagens.gif)](respostas_nulas_linguagens.gif)
+[![grne](grafico_respostas_nulas_empilhadas.png)](grafico_respostas_nulas_empilhadas.gif)
 
 [(Voltar ao topo)](#índice)
 ## ⚙️ Configurações
