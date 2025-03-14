@@ -9,10 +9,8 @@
 ## Índice
 - [Sobre](#-sobre)
 - [Objetivos](#-objetivos)
-- [Etapas](#-etapas)
-  - [Extração](#Extração)
-  - [Transformação](#Transformação)
 - [Gráficos](#-Gráficos)
+- [Etapas](#-etapas)
 - [Configurações](#-Configurações)
   - [Instalação](#Instalação)
     - [Local](#para-uso-local)
@@ -35,10 +33,9 @@
 Mostrar o uso das bibliotecas `pandas` e `Matplotlib` com o propósito de tratamento de dados.
 Analisar os dados de tendências no mercado de trabalho na área de tecnologia, de 2018 a 2023 - principais habilidades, ferramentas e linguagens de programação.
 
-
 [(Voltar ao topo)](#índice)
 ## 🪜 Etapas
-Para ficar mais intuitivo, as etapas serão mostradas em outro documento, de maneira que podem ser replicadas no Google Colab.
+Para ficar mais intuitivo, as etapas serão mostradas em outro documento ([ETL_survey.ipynb](ETL_survey.ipynb)), de maneira que podem ser replicadas no Google Colab.
 
 [(Voltar ao topo)](#índice)
 ## 📈 Gráficos
@@ -54,8 +51,6 @@ Para ficar mais intuitivo, as etapas serão mostradas em outro documento, de man
 Linguagem de programação: Python.
 Usei as bibliotecas: `pandas` e `Matplotlib` para coleta, processamento e formatação dos dados e a para gráficos e análise, respectivamente.
 Ambiente de Desenvolvimento: Visual Studio Code e Google Colab.
-
-Instalação na próxima seção [Instalação](#instalação).
 
 [(Voltar ao topo)](#índice)
 ### Instalação
@@ -83,3 +78,5 @@ This database - The Public 2018 Stack Overflow Developer Survey Results - is mad
 TLDR: You are free to share, adapt, and create derivative works from The Public 2018 Stack Overflow Developer Survey Results as long as you attribute Stack Overflow, keep the database open (if you redistribute it), and continue to share-alike any adapted database under the ODbl.\
 \
 [Open Database License (ODbL) 1.0](https://github.com/ghiordanobruno/Pred_SODeveloperSurvey/blob/main/LICENSE)
+
+[(Voltar ao topo)](#índice)
