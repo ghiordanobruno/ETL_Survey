@@ -28,15 +28,19 @@
 
 ## 🚀 Sobre
 
-A common convention in software development is to place a file named _README_ at the top level of a project's source code repository. The file is used to provide basic documentation about the project. The file you are reading now is intended as a self-documenting template for README files, as well an illustration of what the file can be expected to look like. Its structure is based on many other people's examples and recommendations for README files, as well as the author's own experiences of creating open-source projects and repositories over three decades. It is written in [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) format, but could easily be converted to other formats.
-
-For a real software project, the [Introduction](#introduction) section – which you are presently reading – should summarize the motivations for creating the software, the need(s) addressed by the software, what the software does, and optionally, links to resources that can help orient readers. Ideally, this section should be short and use plain language. Keep in mind that not all readers will be familiar with the topic area.
+#### ETL com pandas e Matplotlib:
+  - Processamento e análise de **mais de 560.000** respostas da pesquisa Stack Overflow (2018-2024), extraindo insights sobre tendências em linguagens de programação.
+  - Otimização pipeline ETL (Extração, Transformação, Carregamento), reduzindo inconsistências e facilitando análises futuras.
+  - Desenvolvimento de um sistema dinâmico de padronização de dados que se adapta a mudanças estruturais em conjuntos de dados ao longo dos anos, garantindo a integridade dos dados e minimizando a intervenção manual.
+  - Utilização do pandas para manipular e analisar eficientemente grandes conjuntos de dados, melhorando a flexibilidade e velocidade da análise de dados.
+  - Criação de gráficos detalhados usando Matplotlib, permitindo interpretação clara das tendências de adoção de linguagens e a evolução das respostas ao longo do tempo, facilitando insights baseados em dados.
+  - Melhora na tomada de decisões na análise de dados, estruturando os resultados para identificar padrões de crescimento e queda de linguagens de programação.
 
 [(Voltar ao topo)](#índice)
 ## 📝 Objetivos
+Mostrar o uso das bibliotecas `pandas` e `Matplotlib` com o propósito de tratamento de dados.
+Analisar os dados de tendências no mercado de trabalho na área de tecnologia, de 2018 a 2023 - principais habilidades, ferramentas e linguagens de programação.
 
-Analisar os dados de tendências no mercado de trabalho na área de tecnologia, de 2018 a 2023, para prever as principais habilidades, ferramentas e linguagens de programação que serão mais demandadas em 2024. 
-Avaliar a precisão das predições a partir da coleta de dados de 2024.
 
 [(Voltar ao topo)](#índice)
 ## 🪜 Etapas
