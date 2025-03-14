@@ -47,7 +47,7 @@ Para ficar mais intuitivo, as etapas serão mostradas em outro documento ([ETL_s
 [![grne](grafico_respostas_nulas_empilhadas.png)](grafico_respostas_nulas_empilhadas.gif)
 
 [(Voltar ao topo)](#índice)
-## ⚙️ Configurações
+## ⚙ Configurações
 Linguagem de programação: Python.
 Usei as bibliotecas: `pandas` e `Matplotlib` para coleta, processamento e formatação dos dados e a para gráficos e análise, respectivamente.
 Ambiente de Desenvolvimento: Visual Studio Code e Google Colab.
