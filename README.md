@@ -35,7 +35,7 @@ Analisar os dados de tendências no mercado de trabalho na área de tecnologia, 
 
 [(Voltar ao topo)](#índice)
 ## 🪜 Etapas
-Para ficar mais intuitivo, as etapas serão mostradas em outro documento ([ETL_survey.ipynb](ETL_survey.ipynb)), de maneira que podem ser replicadas no Google Colab.
+Para ficar mais intuitivo, as etapas serão mostradas em outro documento ([survey_ETL.ipynb](survey_ETL.ipynb)), de maneira que podem ser replicadas no Google Colab.
 
 [(Voltar ao topo)](#índice)
 ## 📈 Gráficos
